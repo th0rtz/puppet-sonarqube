@@ -207,13 +207,11 @@ GEM
       thor (~> 0.15)
     locale (2.1.2)
     memoist (0.16.0)
-    metaclass (0.0.4)
     mime-types (2.99.3)
     mini_portile2 (2.4.0)
     minitar (0.8)
     minitest (5.11.3)
-    mocha (1.1.0)
-      metaclass (~> 0.0.1)
+    mocha (1.11.2)
     multi_json (1.13.1)
     multipart-post (2.1.1)
     net-scp (1.2.1)
@@ -224,6 +222,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     open_uri_redirections (0.2.1)
     os (1.0.1)
+    pathspec (0.2.1)
     public_suffix (1.4.6)
     puppet (6.6.0)
       facter (> 2.0.1, < 4)
@@ -236,10 +235,11 @@ GEM
       semantic_puppet (~> 1.0)
     puppet-blacksmith (4.1.2)
       rest-client (~> 2.0)
-    puppet-lint (1.1.0)
+    puppet-lint (2.4.2)
     puppet-resource_api (1.8.4)
       hocon (>= 1.0)
-    puppet-syntax (2.0.0)
+    puppet-syntax (2.6.1)
+      puppet (>= 5)
       rake
     puppet_forge (2.3.0)
       faraday (>= 0.9.0, < 0.14.0)
@@ -247,13 +247,13 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (0.9.1)
-      mocha
-      puppet-lint
-      puppet-syntax
-      rake
-      rspec-puppet
-    rake (10.4.2)
+    puppetlabs_spec_helper (2.14.1)
+      mocha (~> 1.0)
+      pathspec (~> 0.2.1)
+      puppet-lint (~> 2.0)
+      puppet-syntax (~> 2.0)
+      rspec-puppet (~> 2.0)
+    rake (13.0.1)
     rbvmomi (1.8.2)
       builder
       nokogiri (>= 1.4.1)
@@ -277,8 +277,8 @@ GEM
       rspec-core (>= 2.99.0.beta1)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-mocks (2.99.4)
-    rspec-puppet (2.0.0)
-      rspec (~> 2.0)
+    rspec-puppet (2.7.8)
+      rspec
     rsync (1.0.9)
     semantic_puppet (1.0.2)
     serverspec (1.16.0)
@@ -316,8 +316,8 @@ DEPENDENCIES
   puppet (>= 5.3.7)
   puppet-blacksmith (>= 3.3.1)
   puppet-lint (>= 1.1.0)
-  puppetlabs_spec_helper (>= 0.8.0)
-  rake
+  puppetlabs_spec_helper (>= 0.9.1)
+  rake (>= 12.3.3)
   rspec-puppet (>= 1.0.0)
   simplecov
 
