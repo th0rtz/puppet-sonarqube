@@ -3,7 +3,7 @@
 
 source 'https://rubygems.org'
 
-gem 'puppet', '>= 5.3.7', :require => false
+gem 'puppet', '>= 6.25.1', :require => false
 
 gem 'rake', :require => false
 gem 'rspec-puppet', '>= 1.0.0', :require => false
